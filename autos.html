@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Autos | Rev-Up Tech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-deep: #0B0B0B;
+            --bg-graphite: #1C1C1C;
+            --primary-neon: #FF1E1E;
+            --text-pure: #FFFFFF;
+            --text-metallic: #A2A2A6;
+            --border-steel: #2C2C2E;
+            --font-tech: 'Orbitron', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-pure);
+            font-family: var(--font-body);
+        }
+
+        h1, h2, h3, .navbar-brand {
+            font-family: var(--font-tech);
+        }
+
+        /* Navbar Estilizado */
+        .navbar {
+            background-color: rgba(11, 11, 11, 0.95);
+            border-bottom: 1px solid var(--border-steel);
+            padding: 15px 0;
+        }
+        .brand-highlight {
+            color: var(--primary-neon);
+        }
+        .nav-link {
+            color: var(--text-pure) !important;
+            font-family: var(--font-tech);
+            font-size: 0.9rem;
+            margin-left: 20px;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-neon) !important;
+        }
+
+        /* Banner Principal */
+        .page-banner {
+            background: linear-gradient(135deg, #111111 0%, #1c1c1c 100%);
+            border-bottom: 1px solid var(--border-steel);
+            padding: 80px 0 60px 0;
+            position: relative;
+        }
+        .page-banner::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-neon), transparent);
+        }
+
+        /* Input de Búsqueda */
+        .search-container .form-control {
+            background-color: var(--bg-graphite);
+            border: 1px solid var(--border-steel);
+            color: var(--text-pure);
+            font-size: 1.1rem;
+            padding: 12px 20px;
+            border-radius: 6px;
+        }
+        .search-container .form-control:focus {
+            border-color: var(--primary-neon);
+            box-shadow: 0 0 10px rgba(255, 30, 30, 0.2);
+            background-color: var(--bg-graphite);
+            color: var(--text-pure);
+        }
+
+        /* Grid de Servicios (Cards Modernas) */
+        .service-card {
+            background-color: var(--bg-graphite);
+            border: 1px solid var(--border-steel);
+            border-radius: 8px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card:hover {
+            border-color: var(--primary-neon);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(255, 30, 30, 0.15);
+        }
+        .service-icon-box {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 30, 30, 0.1);
+            border: 1px solid rgba(255, 30, 30, 0.2);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            transition: background-color 0.3s ease;
+        }
+        .service-card:hover .service-icon-box {
+            background-color: var(--primary-neon);
+        }
+        .service-card:hover .service-icon-box span {
+            color: var(--text-pure) !important;
+        }
+        .service-icon-box span {
+            font-size: 2rem;
+            color: var(--primary-neon);
+            transition: color 0.3s ease;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            border-top: 1px solid var(--border-steel);
+            padding: 40px 0;
+        }
+        footer a {
+            color: var(--text-metallic);
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: var(--primary-neon);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                REV<span class="brand-highlight">-</span>UP TECH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="autos.html">Mundo Autos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="motos.html">Mundo Motos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <span class="text-uppercase text-danger fw-bold small tracking-wider" style="letter-spacing: 2px;">División 4 Ruedas</span>
+                    <h1 class="fw-bold mt-2 mb-3">Soluciones de Software para Autos</h1>
+                    <p class="text-metallic m-0 fs-5">Módulos de alto rendimiento diseñados para optimizar talleres y concesionarias automotrices.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-6 search-container">
+                <div class="position-relative">
+                    <input type="text" id="serviceSearch" class="form-control text-center" placeholder="Buscar un módulo o solución específica...">
+                </div>
+                <div id="searchFeedback" class="text-center mt-3 text-metallic small d-none"></div>
+            </div>
+        </div>
+
+        <div class="row g-4" id="servicesGrid">
+            
+            <div class="col-md-6" data-search="citas agenda inteligente programar talleres mecanicos bahias">
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <span class="material-icons-round">calendar_month</span>
+                    </div>
+                    <h3 class="h4 text-uppercase fw-bold mb-3">Citas y Agenda Inteligente</h3>
+                    <p class="text-metallic m-0 lh-lg">
+                        Sistema digital inteligente estructurado para programar de manera automatizada los servicios mecánicos. Permite una eficiente asignación y control de bahías de trabajo físicas dentro de los talleres de autos, evitando cuellos de botella operativos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-search="ventas repuestos ecommerce e-commerce cotizaciones automotrices">
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <span class="material-icons-round">shopping_cart</span>
+                    </div>
+                    <h3 class="h4 text-uppercase fw-bold mb-3">Gestión de Venta de Repuestos</h3>
+                    <p class="text-metallic m-0 lh-lg">
+                        Módulo avanzado de E-commerce integrado con cotizaciones automatizadas e inmediatas en línea. Diseñado específicamente para agilizar la comercialización B2B o B2C de partes automotrices y repuestos de autos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-search="control inventarios stock trazabilidad herramientas repuestos">
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <span class="material-icons-round">inventory_2</span>
+                    </div>
+                    <h3 class="h4 text-uppercase fw-bold mb-3">Control de Inventarios</h3>
+                    <p class="text-metallic m-0 lh-lg">
+                        Trazabilidad exhaustiva en tiempo real del stock de repuestos, lubricantes y herramientas críticas. Permite alertas de desabastecimiento, vinculación automática con órdenes de compra y conciliación sistemática con proveedores.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-search="historial clinico vehicular mantenimiento reparaciones kilometraje">
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <span class="material-icons-round">history_edu</span>
+                    </div>
+                    <h3 class="h4 text-uppercase fw-bold mb-3">Historial Clínico Vehicular</h3>
+                    <p class="text-metallic m-0 lh-lg">
+                        Registro digital privado e inmutable del historial completo de mantenimiento, reparaciones ejecutadas, diagnósticos de scanner y evolución de kilometraje de cada automóvil. Accesible solo para personal autorizado y propietarios.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center text-md-start">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6">
+                    <h5 class="fw-bold text-white font-tech mb-2">REV-UP TECH</h5>
+                    <p class="text-metallic m-0">Optimización digital e ingeniería de software automotriz.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="mb-3">
+                        <a href="index.html" class="me-3">Inicio</a>
+                        <a href="motos.html" class="me-3">Motos</a>
+                        <a href="#">Soporte</a>
+                    </div>
+                    <p class="text-metallic small m-0">&copy; 2026 Rev-Up Tech. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.getElementById('serviceSearch').addEventListener('input', function(e) {
+            // Conversión del input del usuario a minúsculas para coincidencia insensible
+            const currentSearch = e.target.value.toLowerCase().trim();
+            const serviceCards = document.querySelectorAll('#servicesGrid > div');
+            const feedbackEl = document.getElementById('searchFeedback');
+            let visibleCount = 0;
+
+            serviceCards.forEach(card => {
+                // Recuperación de las palabras clave del atributo custom data-search
+                const searchKeywords = card.getAttribute('data-search').toLowerCase();
+                
+                // Si la palabra clave está vacía o coincide con el contenido de búsqueda
+                if (currentSearch === "" || searchKeywords.includes(currentSearch)) {
+                    card.style.display = "block"; // Se muestra la columna de Bootstrap
+                    visibleCount++;
+                } else {
+                    card.style.display = "none";  // Se oculta
+                }
+            });
+
+            // Manejo estético de la retroalimentación al usuario si no hay resultados hallados
+            if (currentSearch !== "") {
+                feedbackEl.classList.remove('d-none');
+                feedbackEl.innerHTML = `Mostrando ${visibleCount} módulos que coinciden con su búsqueda.`;
+            } else {
+                feedbackEl.classList.add('d-none');
+            }
+        });
+    </script>
+</body>
+</html>
